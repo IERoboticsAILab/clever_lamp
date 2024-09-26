@@ -9,7 +9,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # Parameters
 r = 5  # Radius of the working sphere
-target = np.array([0, 0, 7])  # Target coordinates (x, y, z)
+target = np.array([5, 4, 2])  # Target coordinates (x, y, z)
 
 # Calculate intersection point with the sphere
 distance = np.linalg.norm(target)  # Calculate the norm (magnitude) of the target vector
