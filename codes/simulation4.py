@@ -99,12 +99,12 @@ def closest_point_on_ellipsoid(center, semi_axes, point, plot=False):
 # Example Usage:
 center = (0, 0, 10)  # Center of the ellipsoid
 semi_axes = (4, 4, 3)  # Semi-axes lengths (a, b, c)
-target_point = (0, 0, 2)  # Target point in space
+target_point = (0, 1, 9)  # Target point in space
 plot_3d = True  # Set to True to visualize the result
 
 results = closest_point_on_ellipsoid(center, semi_axes, target_point, plot_3d)
-
-# Output the results
+# #Output the results
+print(results['closest_point'][0])
 print(f"The closest point on the ellipsoid is {results['closest_point']}")
 print(f"The minimum distance from the point to the ellipsoid is {results['min_distance']:.2f}")
 print(f"Pitch: {results['pitch']:.2f}°, Roll: {results['roll']:.2f}°, Yaw: {results['yaw']:.2f}°")
