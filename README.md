@@ -28,7 +28,7 @@ To run the code you will need some prerequisites:
 
 1. Setup:
     <div align="center">
-    <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/station_setup.png" alt="station setup" width="450">
+    <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/station_setup.png" alt="station setup" width="750">
     </div>
 
 2. create ros package with some dependencies:
@@ -49,7 +49,7 @@ To run the code you will need some prerequisites:
     ```
 
     <div align="center">
-    <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/natnet_setup.png" alt="natnet setup" width="350">
+    <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/natnet_setup.png" alt="natnet setup" width="550">
     </div>
 
 5. In another terminal, source the interbotix workspace and run controll package:
@@ -84,9 +84,9 @@ Combine the 2 parts of the project and this is what you will have:
 Demo example: lets say we are looking at giraffes and we are curious to know more about it, we can trigger the computer vision to tell us what it sees, and send us a YouTube video about it. Then we can manipulate the position of the projector and projct on a specific area of the table. Using chorome cast attached to the projector we have one more screen to improve our working quality.
 
 <div align="center">
-  <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/demo1.gif" alt="real space result" width="250">
+  <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/demo1.gif" alt="real space result" width="550">
 </div>
 
 <div align="center">
-  <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/demo1RViz.gif" alt="RViz result" width="250">
+  <img src="https://github.com/IERoboticsAILab/clever_lamp/blob/main/Videos_and_pictures/demo1RViz.gif" alt="RViz result" width="550">
 </div>
