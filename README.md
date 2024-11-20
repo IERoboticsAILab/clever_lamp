@@ -26,4 +26,36 @@ To run the code you will need some prerequisites:
 
 ## Move robot
 
+1. create ros package with some dependencies:
+
+    ```
+    catkin_create_pkg alfred_clever_lamp std_msgs rospy roscpp
+    ```
+
+2. Source workspace
+
+    ```
+    source catkin_ws/devel/setup.bash
+    ```
+
+3. Run natnet gui to send data to your roscore
+    ```
+    roslaunch natnet_ros_cpp gui_natnet_ros.launch
+    ```
+
+4. In another terminal, source the interbotix workspace and run controll package:
+    ```
+    roslaunch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250s
+    ```
+
+5. After building catkin workspace you can now launch [clever_lamp.launch]() that will execute both nodes [brodcast_marker.py]() and []()
+
+    a. `brodcast_marker.py`:
+
+    b. `clever_lamp.py`:
+
 ## Computer vision
+
+## Demo
+
+Combine the 2 parts of the project and this is what you will have
