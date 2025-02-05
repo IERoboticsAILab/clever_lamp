@@ -59,9 +59,11 @@ To run the code you will need some prerequisites:
     roslaunch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250s
     ```
 
-6. After building catkin workspace you can now launch [clever_lamp.launch](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Alfred_clever_lamp/launch/clever_lamp.launch) that will execute both nodes [brodcast_marker.py](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Alfred_clever_lamp/src/brodcast_marker.py) and [clever_lamp.py](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Alfred_clever_lamp/src/clever_lamp.py)
+6. After building catkin workspace you can now launch [clever_lamp.launch](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Alfred_clever_lamp/launch/clever_lamp.launch) that will execute both nodes [brodcast_marker.py](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Alfred_clever_lamp/src/brodcast_marker.py), [clever_lamp.py](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Alfred_clever_lamp/src/clever_lamp.py) and [computer_vision.py](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Alfred_clever_lamp/src/computer_vision.py)
 
-    ```
+    ```python
+    source /home/gringo/clever_lamp/Computer_vision/env/bin/activate # dependencies for Computer vision
+
     roslaunch alfred_clever_lamp clever_lamp.launch
     ```
 
@@ -69,7 +71,21 @@ To run the code you will need some prerequisites:
 
     b. `clever_lamp.py`: Look at the tf transformation of the universal marker position relative to the digital space and move end effector accordingly.
 
-    c. `computer_vision.py`: Look at the webcam, detect using mediapipe if you are pointing at something with your finger, take screenshot and shows YouTube video and Wikipedia of what you are looking at. If it detect some math, it solve it step by tep with you, projecting on the paper the solution.
+    c. `computer_vision.py`: Look at the webcam, detect using mediapipe if you are pointing at something with your finger, take screenshot and shows YouTube video and Wikipedia of what you are looking at. If it detect some math, it solve it step by tep with you, projecting on the paper the solution. To run this script you will need to create a virtual environment with all the dependencies and activate it when launching the alfred node.
+
+
+### Usage
+
+1. Move the Universal Marker and the robot will follow pointing the projector content on the table.
+
+2. Lift the Marker to change the projection surface form table to wall in fornt.
+
+3. Rotate the marker to show next YouTube video or the next step in math problem.
+
+4. Point on the workspace with your finger to trigger the screenshot and therfore the AI model
+
+5. Speak to AIfred for more concise response or personalized google querys
+
 
 ## Demo
 
