@@ -9,11 +9,13 @@ Creating the best friend for user desck. We will use wx250s robotic arm from tro
 
 ## Intro
 
-This project introduces the Clever Lamp, an innovative robotic lighting system designed to be the perfect companion for users. The system features a WX250s robotic arm from Trossen Robotics, equipped with a Kodak Mini projector mounted on its end-effector. The Clever Lamp combines advanced robotics with customizable projection capabilities, creating a versatile and interactive lighting solution.
+This project introduces AIfred, a Clever Lamp, and innovative robotic lighting system designed to be the perfect companion for users. The system features a WX250s robotic arm from Trossen Robotics, equipped with a Kodak Mini projector mounted on its end-effector. The Clever Lamp combines advanced robotics with customizable projection capabilities, creating a versatile and interactive lighting solution.
 
 The robotic arm's precise movements allow the projector to illuminate and transform the surrounding environment with tailored images and videos. Users can effortlessly manipulate the lamp's position and projection content, offering a unique and personalized lighting experience. The simplicity of the 3D design ensures ease of use and installation, while the customization options open up a wide range of applications, from mood lighting and entertainment to educational and professional uses.
 
 By integrating cutting-edge robotics with user-centric design, the Clever Lamp offers immense potential for creative and practical applications, making it an indispensable addition to modern living spaces.
+
+The objective of the project is to have a friend and tool at the disposal of the user. With a simple webcam, AIfred can detect what is appening on the user workspace and provide with usefull insights such as YouTube videos and Wikypedia links. Moreover, AIfred will be able to see your workspace intercat with you with voice (speech-to-speech) and solve on paper math for you.
 
 ## Before running the code
 
@@ -24,7 +26,7 @@ To run the code you will need some prerequisites:
 3. For a easyer user interaction we 3D printed our [universal marker](https://github.com/IERoboticsAILab/3d_printing_designs/blob/main/files/optitrack/Universal_Marker_3.stl). It is an object that will be easily detected from Optitrack. We call it `umh_2`.
 4. For a easyer user interaction we 3D printed our [custom wx250s base](https://github.com/IERoboticsAILab/3d_printing_designs/blob/main/files/WX-250_robot_garden/base/bottom_base_WX-250_for%20Optitrack.stl), for the robot arm. It has M3 scrues to host marker balls in place and detect position of robot base. We call it `real_base_wx250s`.
 
-## Move robot
+## AIfred Ros Package
 
 1. Setup:
     <div align="center">
@@ -67,15 +69,7 @@ To run the code you will need some prerequisites:
 
     b. `clever_lamp.py`: Look at the tf transformation of the universal marker position relative to the digital space and move end effector accordingly.
 
-
-
-## Computer vision
-
-For first interation I am using YOLO 8 localy to detect predefined classes (such as `model.set_classes(["lamp", "pen", "phone", "superman", "giraffe"])`).
-
-[main-py](https://github.com/IERoboticsAILab/clever_lamp/blob/main/Computer_vision/main.py) will take a screen shot when user press "send" and given the detected classes will search first youtube video that pop out when searching what it just detected.
-
----
+    c. `computer_vision.py`: Look at the webcam, detect using mediapipe if you are pointing at something with your finger, take screenshot and shows YouTube video and Wikipedia of what you are looking at. If it detect some math, it solve it step by tep with you, projecting on the paper the solution.
 
 ## Demo
 

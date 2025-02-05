@@ -5,4 +5,7 @@
   <!-- Launch the Python script -->
   <node pkg="alfred_clever_lamp" type="clever_lamp.py" name="clever_lamp" output="screen">
   </node>
+  <!-- Launch the Python script -->
+  <node pkg="alfred_clever_lamp" type="computer_vision.py" name="computer_vision" output="screen">
+  </node>
 </launch>
